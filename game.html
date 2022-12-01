@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pong Game</title>
 </head>
+
 <body>
 
     <canvas id="gameCanvas" width="800" height="600"></canvas>
@@ -13,13 +15,21 @@
     <script>
         let canvas, canvasContext;
 
-        window.onload = function() {
+        window.onload = function () {
             console.log('Hello World');
             canvas = document.getElementById('gameCanvas');
             canvasContext = canvas.getContext('2d');
+            drawEverything();
+
+        }
+
+        const drawEverything = () => {
             canvasContext.fillStyle = 'black';
-            canvasContext.fillRect(0,0,canvas.width,canvas.height);
+            canvasContext.fillRect(0, 0, canvas.width, canvas.height);
+            canvasContext.fillStyle = 'green';
+            canvasContext.fillRect(canvas.width/2, canvas.height/2, 40, 40);
         }
     </script>
 </body>
+
 </html>
